@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center" style="background: rgb(46, 45, 45); color: white; padding: 20px">Weather Dashboard</h1>
+    <div class="container">
+        <div class="row">
+            <!-- left side -->
+            <div class="col-sm-3" style="background-color: #f3f0f0">
+                <form role="form">
+                    <div class="form-group">
+                        <label><strong> Search for a city:</strong></label>
+                        <div class="row">
+                            <select id="search-term" class="col-sm-10" class="custom-select" aria-labeeledby="dropdownMenu"
+                                id="search-term">
+                                <option value="atlanta">Atlanta</option>
+                                <option value="austin">Austin</option>
+                                <option value="chicago">Chicago</option>
+                                <option value="portland">Portland</option>
+                                <option value="los angeles">Los Angeles</option>
+                                <option value="sacramento">Sacramento</option>
+                                <option value="newyork">New York</option>
+                                <option value="san diego">San Diego</option>
+                                <option value="denver">Denver</option>
+                                <option value="orlando">Orlando</option>
+                                <option value="seattle">Seattle</option>
+                                <option value="portland">Portland</option>
+                            </select>
+                            <button class="btn btn-primary" type="submit" class="col-sm-2" id="run-search"><i
+                                    class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- right side -->
+            <div class="col-sm-9" style="background-color: white; color: black">
+                <!-- current weather -->
+                    <div class="card">
+                        <div class="card-body">
+                                <div class="city" style="display:inline-block"></div>
+                                <div class="today" style="display:inline-block"></div>                              
+                                <div id="icon" style="display:inline-block"><img id="wicon" src="" alt="Weather icon"></div>
+                                <br>
+                                <div class="temp"></div>
+                                <br>
+                                <div class="humidity"></div>
+                                <br>
+                                <div class="wind"></div>
+                                <br>
+                                <div class="UVIndex"></div>
+                                <br>
+                        </div>
+                    </div>
+                <!-- 5 day forecast -->           
+                    <h4>5-Day Forecast:</h4>
+                    <div class="row" id="forecastCardsDisplay">            
+                    </div>        
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
