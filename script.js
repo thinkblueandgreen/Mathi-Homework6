@@ -60,7 +60,7 @@ function forecast(queryURL) {
         var cardHumidity = $("<p>").text("Humidity: " + response.list[i].main.humidity); 
 
         var forecastCardEl = $("<div>")
-        forecastCardEl.addClass("col-md-2 card text-white bg-primary")
+        forecastCardEl.addClass("col-sm-5 col-md-2 col-lg-2 card text-white bg-primary")
         forecastCardEl.css({"margin" : "10px"})
         forecastCardEl.append(cardDate);
         forecastCardEl.append(forecastLogo);
